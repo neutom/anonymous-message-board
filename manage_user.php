@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	$db = new mysqli('localhost', 'root', '', 'toydb');
+	$db = new mysqli(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS, 'app_toytest00');
 	if (mysqli_connect_errno()){
 		echo 'Error: could not connect to database ';
 		exit;
@@ -60,7 +60,7 @@
 		echo '<strong>you have not authorizaton';
 	}
 ?>
-	<input type="button" name="return" value="return" onclick="window.location.href='login.html'">
+	<input type="button" name="return" value="return" onclick="window.location.href='index.html'">
 	
 </form>
 </div>

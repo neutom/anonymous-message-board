@@ -1,6 +1,6 @@
 <?php 
 	//connect database, set cookie and authority
-	$db = new mysqli('localhost', 'root', '', 'toydb');
+	$db = new mysqli(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS, 'app_toytest00');
 	if (mysqli_connect_errno()){
 		echo 'Error: could not connect to database ';
 		exit;
