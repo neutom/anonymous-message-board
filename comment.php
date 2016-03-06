@@ -1,4 +1,5 @@
-<?php 
+<?php
+	header("Content-type: text/html; charset=utf-8"); 
 	//connect database, set cookie and authority
 	$db = new mysqli(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS, 'app_toytest00');
 	if (mysqli_connect_errno()){
@@ -67,6 +68,7 @@
     		<tr><td><input type="submit" name="comment" value="comment">';
 		
 	}
+	echo '<tr><td><input type="button" name="return" value="return" onclick="window.location.href=\'manage.php\'"></td></tr>';
 	echo "<tr><td>&nbsp</td></tr>";
 	
 	$query = "select * from comments order by comment_id desc";

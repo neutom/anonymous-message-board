@@ -1,5 +1,6 @@
 <?php 
 	session_start();
+	header("Content-type: text/html; charset=utf-8"); 
 	$db = new mysqli(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS, 'app_toytest00');
 	if (mysqli_connect_errno()){
 		echo 'Error: could not connect to database ';
@@ -43,6 +44,7 @@
 		echo '<table>';
 		echo '<tr><td><input type="submit" name="ban_cookie" value="ban cookie"></td>';
 		echo '<td><input type="submit" name="allow_cookie" value="allow cookie"></td>';
+		echo '<td><input type="button" name="return" value="return" onclick="window.location.href=\'manage.php\'"></td>';
 		echo '<td><input type="submit" name="log_out" value="log out"></td></tr>';
 		$query = 'select * from users order by time desc';
 		$result = $db->query($query);
@@ -60,7 +62,7 @@
 		echo '<strong>you have not authorizaton';
 	}
 ?>
-	<input type="button" name="return" value="return" onclick="window.location.href='index.html'">
+	
 	
 </form>
 </div>
