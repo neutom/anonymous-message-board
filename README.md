@@ -1,2 +1,2 @@
 # anonymous-message-board
-both usrname and password are "admin"
+both username and password are "admin"
